@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 18%;
+    background: #000;
+    align-items: center;
+}
+.spotify_logo{
+    width: 100%;
+}
+.logo{
+    margin: 25px 0 0 25px ;
+}
+.side_panel{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.container .side_panel{
+    width: 90%;
+    margin-bottom: 50px;
+}
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 40px;
+    list-style: none;
+    cursor: pointer;
+    padding-left: 20px;
+}
+.links a{
+    color: #9b9b9b;
+    font-size: 14px;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: 0.6s ease;
+}
+svg{
+    margin-right: 15px;
+}
+.links:hover a{
+    color: #fff;
+}
+.links:hover svg{
+    fill: #fff;
+    transition: 0.6s ease;
+}
+.links:hover svg line{
+    stroke: #fff;
+    transition: 0.6s ease;
+}
+.create_liked{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 40px;
+    list-style: none;
+    width: 100%;
+    cursor: pointer;
+    padding-left: 20px;
+}
+.create_liked li{
+    list-style: none;
+    color: #9b9b9b;
+    height: 40px;
+    font-size: 14px;
+    display: flex;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: 0.6s ease;
+}
+.create_liked li a{
+    color: #9b9b9b;
+    font-size: 14px;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: 0.6s ease;
+}
+.create_liked ul{
+    width: 90%;
+}
+c{
+    height: 20px;
+    background: #9b9b9b;
+    padding: 5px 5px;
+    color: black;
+    font-size: 14px;
+}
