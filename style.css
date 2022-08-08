@@ -224,7 +224,7 @@ header{
 }
 .btn .Upgrade_btn:hover{
     background: #000;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
 }
 .btn .account_btn{
     align-items: center;
