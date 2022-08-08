@@ -1,12 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-::-webkit-scrollbar{
-    display: none;
+    font-family:CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic Pro", Meiryo, "MS Gothic", sans-serif;
 }
 .container{
     height: 100vh;
@@ -17,9 +13,21 @@ nav{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 18%;
+    width: 250px;
     background: #000;
     align-items: center;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background: #808080;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #9b9b9b;
 }
 .spotify_logo{
     width: 100%;
@@ -34,8 +42,8 @@ nav{
     flex-direction: column;
 }
 .container .side_panel{
-    width: 90%;
-    margin-bottom: 50px;
+    width: 100%;
+    margin-bottom: 30px;
 }
 .links{
     display: flex;
@@ -44,17 +52,15 @@ nav{
     height: 40px;
     list-style: none;
     cursor: pointer;
-    padding-left: 20px;
+    padding-left: 25px;
 }
 .links a{
     color: #9b9b9b;
     font-size: 14px;
-    font-weight: bolder;
+    font-weight: 600;
     text-decoration: none;
+    margin-left: 20px;
     transition: 0.6s ease;
-}
-svg{
-    margin-right: 15px;
 }
 .links:hover a{
     color: #fff;
@@ -70,8 +76,8 @@ svg{
 .create_liked{
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: flex-start;
-    height: 40px;
     list-style: none;
     width: 100%;
     cursor: pointer;
@@ -82,25 +88,84 @@ svg{
     color: #9b9b9b;
     height: 40px;
     font-size: 14px;
+    width: 90%;
     display: flex;
-    font-weight: bolder;
+    align-items: center;
     text-decoration: none;
     transition: 0.6s ease;
 }
 .create_liked li a{
     color: #9b9b9b;
     font-size: 14px;
-    font-weight: bolder;
+    font-weight: 600;
     text-decoration: none;
     transition: 0.6s ease;
+    margin-left: 20px;
 }
 .create_liked ul{
-    width: 90%;
+    width: 100%;
+    margin-left: -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-c{
-    height: 20px;
-    background: #9b9b9b;
-    padding: 5px 5px;
+.create_liked ul li p{
+    font-weight: 100;
+    background: #a7a7a7;
+    padding: 0 6px;
+    border-radius: 3px;
     color: black;
+    font-size: 16px;
+}
+.liked{
+    height: 22px;
+    width: 22px;
+    background-image: url(img/liked\ songs.png);
+    background-size: cover;
+    border-radius: 3px;
+    opacity: 0.7;
+}
+.create_liked li:hover svg{
+    fill: #fff;
+    background: linear-gradient(125deg,red,#fff);
+    transition: 0.6s ease;
+}
+.create_liked li:hover a{
+    color: #fff;
+}
+.create_liked li:hover .liked{
+    opacity: 1;
+    transition: 0.6s ease;
+}
+.create_liked li:hover p{
+    background: #fff;
+    transition: 0.6s ease;
+}
+.create_liked li:nth-child(2){
+    margin-bottom: 15px;
+}
+.hr{
+    width: 80%;
+    height: 0.5px;
+    background: #4b4b4b;
+}
+.playlists{
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.playlists li{
+    list-style: none;
+    margin: 12px 0;
+    height: 20px;
+}
+.playlists li a{
+    color: #a7a7a7;
+    font-weight: 600;
     font-size: 14px;
+    text-decoration: none;
+    padding-left: 30px;
+}
+.playlists li:hover a{
+    color: #fff;
 }
