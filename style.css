@@ -5,6 +5,7 @@
     font-family:CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic Pro", Meiryo, "MS Gothic", sans-serif;
 }
 .container{
+    display: flex;
     height: 100vh;
     width: 100%;
     background: #fff;
@@ -21,13 +22,13 @@ nav{
     width: 15px;
 }
 ::-webkit-scrollbar-thumb{
-    background: #808080;
+    background: #80808088;
 }
 ::-webkit-scrollbar-track{
     background: transparent;
 }
 ::-webkit-scrollbar-thumb:hover{
-    background: #9b9b9b;
+    background: #cfcfcf83;
 }
 .spotify_logo{
     width: 100%;
@@ -112,7 +113,7 @@ nav{
 .create_liked ul li p{
     font-weight: 100;
     background: #a7a7a7;
-    padding: 0 6px;
+    padding: 3px 7px;
     border-radius: 3px;
     color: black;
     font-size: 16px;
@@ -168,4 +169,118 @@ nav{
 }
 .playlists li:hover a{
     color: #fff;
+}
+.grid_container{
+    display: flex;
+    width: inherit;
+    flex-direction: column;
+    background: #121212;
+    overflow-y: scroll;
+}
+header{
+    width: calc(100% - 200px);
+    display: flex;
+    height: 64px;
+    align-items: center;
+    justify-content: space-between;
+    background: #402727;
+    position: fixed;
+}
+.back_front{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+.back_front button{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: not-allowed;
+    height: 32px;
+    width: 32px;
+    margin-right: 15px;
+}
+.btn{
+    margin-right: 20px;
+    display: flex;
+}
+.btn .Upgrade_btn{
+    box-sizing: border-box;
+    background: transparent;
+    font-size: 0.81rem;
+    font-weight: 800;
+    border-radius: 500px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 33ms;
+    padding-block: 3px;
+    padding-inline: 15px;
+    border: 1px solid #727272;
+    color: #fff;
+    min-block-size: 32px;
+}
+.btn .Upgrade_btn:hover{
+    background: #000;
+    border: 1px solid #fff;
+}
+.btn .account_btn{
+    align-items: center;
+    background-color: rgba(0,0,0,.7);
+    border: 0;
+    border-radius: 23px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    height: 32px;
+    width: 110px;
+    padding: 2px;
+    margin-left: 15px;
+}
+.btn .account_btn img{
+    border-radius: 50q;
+}
+#time{
+    color: #fff;
+    width: 95%;
+}
+.greeting{
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+    padding: 50px 0 0 0;
+    background: linear-gradient(#402727 10%,#121212);
+}
+.install_app{
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    gap: 16px;
+    height: 100px;
+    padding: 13px
+}
+.install_app a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #aaaaaa;
+}
+.install_app:hover svg line,
+.install_app:hover svg,
+.install_app:hover a{
+    stroke: #000;
+    color: #fff;
+    fill: #fff;
+    transition: 0.6s ease;
+}
+
+.install_app:hover svg circle{
+    stroke: #fff;
+}
+.faltu{
+    color: #fff;
+    margin: 50px;
 }

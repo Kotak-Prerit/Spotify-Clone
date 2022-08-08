@@ -1,43 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <title>🎙 Spotify</title>
 </head>
+
 <body>
     <div class="container">
         <nav>
             <div class="spotify_logo"><img class="logo" src="img/Spotify logo.png" alt="logo" height="40px"></div>
             <ul class="side_panel">
-                <li class="links"><svg fill="#fff" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M575.8 255.5C575.8 273.5 560.8 287.6 543.8 287.6H511.8L512.5 447.7C512.5 450.5 512.3 453.1 512 455.8V472C512 494.1 494.1 512 472 512H456C454.9 512 453.8 511.1 452.7 511.9C451.3 511.1 449.9 512 448.5 512H392C369.9 512 352 494.1 352 472V384C352 366.3 337.7 352 320 352H256C238.3 352 224 366.3 224 384V472C224 494.1 206.1 512 184 512H128.1C126.6 512 125.1 511.9 123.6 511.8C122.4 511.9 121.2 512 120 512H104C81.91 512 64 494.1 64 472V360C64 359.1 64.03 358.1 64.09 357.2V287.6H32.05C14.02 287.6 0 273.5 0 255.5C0 246.5 3.004 238.5 10.01 231.5L266.4 8.016C273.4 1.002 281.4 0 288.4 0C295.4 0 303.4 2.004 309.5 7.014L564.8 231.5C572.8 238.5 576.9 246.5 575.8 255.5L575.8 255.5z"/></svg><a href="#">Home</a></li>
-                <li class="links"><svg xmlns="http://www.w3.org/2000/svg" height="20" fill="#9b9b9b" viewBox="0 0 512 512"><path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"/></svg><a href="#">Search</a></li>
-                <li class="links"><svg height="20" viewBox="0 0 161 131" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="5" y1="0.998062" x2="5" y2="130.002" stroke="#9b9b9b" stroke-width="10"/>
-                    <line x1="55" y1="1" x2="55" y2="130.004" stroke="#9b9b9b" stroke-width="10"/>
-                    <line x1="105" x2="105" y2="129" stroke="#9b9b9b" stroke-width="10"/>
-                    <line x1="155" y1="39.9398" x2="156" y2="122.94" stroke="#9b9b9b" stroke-width="10"/>
-                    <line x1="107.123" y1="4.09566" x2="157.123" y2="44.0957" stroke="#9b9b9b" stroke-width="10"/>
-                    <line x1="100" y1="124" x2="161" y2="124" stroke="#9b9b9b" stroke-width="10"/>
+                <li class="links"><svg fill="#fff" height="20px" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512">
+                        <path
+                            d="M575.8 255.5C575.8 273.5 560.8 287.6 543.8 287.6H511.8L512.5 447.7C512.5 450.5 512.3 453.1 512 455.8V472C512 494.1 494.1 512 472 512H456C454.9 512 453.8 511.1 452.7 511.9C451.3 511.1 449.9 512 448.5 512H392C369.9 512 352 494.1 352 472V384C352 366.3 337.7 352 320 352H256C238.3 352 224 366.3 224 384V472C224 494.1 206.1 512 184 512H128.1C126.6 512 125.1 511.9 123.6 511.8C122.4 511.9 121.2 512 120 512H104C81.91 512 64 494.1 64 472V360C64 359.1 64.03 358.1 64.09 357.2V287.6H32.05C14.02 287.6 0 273.5 0 255.5C0 246.5 3.004 238.5 10.01 231.5L266.4 8.016C273.4 1.002 281.4 0 288.4 0C295.4 0 303.4 2.004 309.5 7.014L564.8 231.5C572.8 238.5 576.9 246.5 575.8 255.5L575.8 255.5z" />
+                    </svg><a href="#">Home</a></li>
+                <li class="links"><svg xmlns="http://www.w3.org/2000/svg" height="20" fill="#9b9b9b"
+                        viewBox="0 0 512 512">
+                        <path
+                            d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" />
+                    </svg><a href="#">Search</a></li>
+                <li class="links"><svg height="20" viewBox="0 0 161 131" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="5" y1="0.998062" x2="5" y2="130.002" stroke="#9b9b9b" stroke-width="10" />
+                        <line x1="55" y1="1" x2="55" y2="130.004" stroke="#9b9b9b" stroke-width="10" />
+                        <line x1="105" x2="105" y2="129" stroke="#9b9b9b" stroke-width="10" />
+                        <line x1="155" y1="39.9398" x2="156" y2="122.94" stroke="#9b9b9b" stroke-width="10" />
+                        <line x1="107.123" y1="4.09566" x2="157.123" y2="44.0957" stroke="#9b9b9b" stroke-width="10" />
+                        <line x1="100" y1="124" x2="161" y2="124" stroke="#9b9b9b" stroke-width="10" />
                     </svg><a href="#">Your Library</a></li>
             </ul>
             <div class="create_liked">
                 <ul>
-                    <li><p>+</p><a href="#">Create Playlist</a></li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" fill="#9b9b9b" viewBox="0 0 512 512" height="25" style="background: linear-gradient(125deg,#451FB4,#5c5c5c); padding:4px 3px;border-radius:3px"><path d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"/></svg><a href="#">Liked Songs</a></li>
+                    <li>
+                        <p>+</p><a href="#">Create Playlist</a>
+                    </li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" fill="#9b9b9b" viewBox="0 0 512 512" height="25"
+                            style="background: linear-gradient(125deg,#451FB4,#5c5c5c); padding:4px 3px;border-radius:3px">
+                            <path
+                                d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z" />
+                        </svg><a href="#">Liked Songs</a></li>
                 </ul>
             </div>
 
-            <div style="width: 75%; background: #4b4b4b;"><p class="hr"></p></div>
+            <div style="width: 75%; background: #4b4b4b;">
+                <p class="hr"></p>
+            </div>
 
             <div class="playlists">
                 <li><a href="#">Swarg</a></li>
-                <li><a href="#">Hindi Mix</a></li>
+                <li><a href="https://open.spotify.com/playlist/6NkgwlvVxbvnrrPUuiJmTM">Best of Bolly</a></li>
                 <li><a href="#">O is G</a></li>
-                <li><a href="#">Favs in Eng</a></li>
+                <li><a href="https://open.spotify.com/playlist/5wNdMXXNLLT8ZwJ9TrbdEl">Favs in Eng</a></li>
                 <li><a href="#">This is Bobby Darin</a></li>
                 <li><a href="#">This is John Mayer</a></li>
                 <li><a href="#">This is Sonu Nigam</a></li>
@@ -55,7 +72,56 @@
                 <li><a href="#">sjfksdJF</a></li>
                 <li><a href="#">sjfksdJF</a></li>
             </div>
+            <div class="install_app">
+                <a href="#"><svg width="22" height="22" viewBox="0 0 434 434" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="217" cy="217" r="197" stroke="#aaaaaa" stroke-width="40" />
+                        <line x1="216.999" y1="72.1562" x2="214.999" y2="328.156" stroke="#aaaaaa" stroke-width="40" />
+                        <line x1="117.019" y1="236.793" x2="219.075" y2="352.854" stroke="#aaaaaa" stroke-width="40" />
+                        <line x1="325.083" y1="245.321" x2="194.856" y2="354.595" stroke="#aaaaaa" stroke-width="40" />
+                    </svg></a>
+                <a href="#">Install App</a>
+            </div>
         </nav>
+        <div class="grid_container">
+            <header>
+                <div class="back_front">
+                    <button><svg fill="#9c9c9c" role="img" height="22" width="22" viewBox="0 0 24 24">
+                            <path
+                                d="M15.957 2.793a1 1 0 010 1.414L8.164 12l7.793 7.793a1 1 0 11-1.414 1.414L5.336 12l9.207-9.207a1 1 0 011.414 0z">
+                            </path>
+                        </svg></button>
+                    <button><svg fill="#9c9c9c" role="img" height="22" width="22" viewBox="0 0 24 24">
+                            <path
+                                d="M8.043 2.793a1 1 0 000 1.414L15.836 12l-7.793 7.793a1 1 0 101.414 1.414L18.664 12 9.457 2.793a1 1 0 00-1.414 0z">
+                            </path>
+                        </svg></button>
+                </div>
+                <div class="btn">
+                    <button class="Upgrade_btn">Upgrade</button>
+                    <button class="account_btn"><img src="https://source.unsplash.com/28x28/?coder"> Coder <svg
+                            fill="#fff" role="img" height="16" width="16"
+                            class="Svg-ytk21e-0 jAKAlG eAXFT6yvz37fvS1lmt6k" viewBox="0 0 16 16">
+                            <path d="M14 6l-6 6-6-6h12z"></path>
+                        </svg></button>
+                </div>
+            </header>
+            <div class="greeting">
+                <h1 id="time"></h1>
+            </div>
+            <p class="faltu">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti quibusdam, velit eligendi harum, maiores impedit distinctio quasi dolores laudantium eius officia mollitia aspernatur modi commodi cupiditate esse autem eveniet nobis adipisci unde quas ipsum expedita explicabo quidem? Repellendus doloribus libero amet cupiditate minus. In voluptates consectetur fuga saepe nostrum tempora numquam sapiente eos recusandae dignissimos molestias beatae consequuntur quisquam deserunt possimus rerum libero harum facere, eveniet atque. Cupiditate, nemo? Suscipit deserunt et nemo. Minus culpa repudiandae id voluptate consequatur. Est necessitatibus, vero minus tempora nemo atque doloribus libero culpa labore nostrum laboriosam dolore laborum a itaque, qui in fuga obcaecati quas ullam distinctio nesciunt illum sunt. Accusantium iure perspiciatis quisquam culpa maiores veniam temporibus deserunt mollitia molestias sint quod, nam quo error laboriosam dolore odit, ipsam qui illum debitis facere aut quis voluptas porro. Sunt magni dolore recusandae neque eligendi expedita, doloribus sit repellat dicta ratione temporibus atque asperiores? Laboriosam quas dolore incidunt adipisci sunt impedit in ducimus odio rem libero provident suscipit quo iure praesentium amet illo et asperiores culpa soluta ad, nihil, quod non repudiandae obcaecati! Repellendus harum maiores animi dignissimos, adipisci explicabo, accusamus perspiciatis ut dolorem voluptate consequatur? Dolorum deleniti dicta provident eligendi rem. Autem quo pariatur nihil dolores, aliquid voluptatem ratione nulla natus omnis aliquam dolor eos distinctio voluptatibus id quae! Voluptatem consectetur fugiat delectus omnis a aliquid veritatis tempora velit repellendus, temporibus veniam perspiciatis alias. Atque, eum amet nesciunt sunt, a, temporibus dolor tempora sed culpa veniam voluptatum nam consectetur? Sapiente consequuntur excepturi ducimus ea. Illo fuga corporis vero, repellendus perferendis sit corrupti inventore deserunt, est officiis quis, rem minima unde quisquam et obcaecati consectetur consequuntur! Veritatis tenetur dolor non iure quisquam placeat nihil voluptatibus magnam. Tenetur tempora fuga, dolores vel adipisci odio veritatis asperiores at, consequatur enim harum rerum quas repellat dolor totam a ipsa corrupti accusantium saepe quos! Beatae voluptas eos facilis. Incidunt laboriosam quod, quo harum consequatur vitae tempore deserunt quibusdam error enim, dolore repellendus, rem quos exercitationem tenetur nostrum ipsa fugit cumque similique in ipsum optio modi sint praesentium. Qui mollitia odit non, minima eos nulla? Explicabo quibusdam laborum quisquam, iste vel quia minima aspernatur magni sunt repellendus, ipsam, dicta sequi pariatur dolor eligendi assumenda. Fuga minima beatae possimus quisquam est eum enim ut quibusdam incidunt veritatis quos aliquid labore atque dolor cumque non a dicta nisi reiciendis, dolore impedit similique maiores itaque. Nobis, nisi, dolor voluptate saepe rerum corrupti mollitia impedit possimus fugiat excepturi quis a deserunt! Quibusdam tempora, eos consequuntur rerum asperiores rem praesentium explicabo unde amet quis pariatur a eaque dolorem animi, voluptatem iste fugit, eius laboriosam ex porro. Rerum nam perspiciatis nemo adipisci esse distinctio, recusandae animi fugit vitae? Veritatis similique, quos provident amet, deserunt totam a veniam numquam laudantium itaque dolorum incidunt velit omnis eum officiis fugit recusandae corrupti autem ullam? Blanditiis quae cupiditate ducimus nam odit tenetur ratione. Commodi nobis facere ut corporis, a fugit provident, adipisci quasi vitae maxime perferendis assumenda ipsa praesentium nesciunt doloribus aut laborum laudantium animi in! Delectus voluptate sapiente qui corporis vitae modi nesciunt, natus sed? Eveniet ratione est laudantium quisquam dolore. Iusto molestiae delectus quas qui animi accusantium sed aut quae praesentium, possimus nihil facilis natus quod pariatur cumque, fugit ex eum architecto fugiat reiciendis. Atque blanditiis aliquam optio consectetur numquam minus iusto unde nam quia molestias inventore incidunt, iure omnis tempore, ad quidem nisi dolorum non id aut similique? Ad consequuntur, eligendi ut nulla placeat ex enim rem soluta inventore nesciunt animi voluptatibus quod sit aliquid perspiciatis eveniet reprehenderit eaque culpa. Autem sunt perspiciatis dolore facere voluptatem officiis, ipsa, accusamus quod quae ullam iste numquam quis atque deleniti quaerat omnis asperiores non velit, eius dignissimos consequatur consequuntur quos? Doloremque nulla tempore consectetur repudiandae, cum, aliquam non cumque veniam possimus, placeat distinctio fugit incidunt odit sit perspiciatis ea quidem similique? Fuga eveniet, in inventore recusandae magni numquam nesciunt voluptas tenetur unde pariatur id at, delectus sit ducimus ipsam provident tempore natus consequatur voluptates! Ipsa labore minima aspernatur unde aperiam, autem iusto assumenda consequuntur. Tempore, totam exercitationem. Adipisci eligendi nisi delectus, itaque eaque alias repellendus velit blanditiis ad tempore, est temporibus aperiam ipsam officiis deserunt debitis, vero animi fugit voluptatem. Explicabo provident quos molestiae laboriosam adipisci pariatur ex ratione hic cumque maxime deserunt nostrum saepe, molestias facere labore veritatis totam illo, voluptatum quaerat quia sint iure possimus aliquid perferendis! Debitis veniam voluptas exercitationem asperiores. Officia assumenda neque dolores itaque doloribus recusandae iste provident voluptatem. Ducimus minima repudiandae incidunt blanditiis sint similique veniam iure aut repellat voluptas eaque porro aliquam quos maiores impedit a molestiae ad, corrupti laudantium quasi optio reprehenderit quaerat. Laudantium architecto quod velit mollitia saepe odio soluta fugiat beatae. Quisquam corporis eveniet a veritatis officiis. Voluptatibus vel, excepturi magnam perferendis saepe accusantium aliquam eligendi iure aliquid nesciunt praesentium molestiae officiis obcaecati nam, facilis sit. Earum nobis obcaecati ea a doloribus voluptatem quaerat assumenda pariatur saepe? Id deleniti autem voluptatum obcaecati beatae architecto dignissimos? Pariatur explicabo iste, omnis placeat illum, reprehenderit libero accusamus cum facere rem optio, unde cumque magnam. Debitis necessitatibus voluptatem reprehenderit in possimus repellendus vitae magnam. Consectetur quas facere accusantium fugiat hic earum omnis similique tempora vel officiis libero explicabo ducimus quam dignissimos repellendus et nesciunt reprehenderit quo, praesentium amet incidunt sit nisi delectus neque! Minus modi velit amet dignissimos, dolores eum provident hic quae libero facilis officiis quo blanditiis harum ipsa doloremque, pariatur incidunt necessitatibus dolorem unde at culpa. Officia earum beatae eum totam accusamus temporibus tempora sequi aut? Error, laboriosam. Accusamus, soluta ipsa? Exercitationem quo enim expedita illum? Aspernatur corporis reiciendis officia, nam consequatur modi sit. Ipsam in, unde voluptatem error illo nihil, tempore accusantium provident ea, cumque asperiores est natus libero iusto sed maiores totam repellendus aut obcaecati blanditiis dolor beatae! Molestias sed fugiat soluta alias ducimus repellat dolore et minus magnam facilis nostrum adipisci ratione veniam cum reprehenderit corrupti, inventore, velit exercitationem natus! Facere quas repellat aliquid voluptatem corrupti similique numquam repudiandae dolore maxime quia, a sed eius, necessitatibus neque consequuntur non nihil aliquam asperiores. Ducimus itaque porro inventore voluptatibus illum nam!</p>
+        </div>
     </div>
+    <script>
+        function greeting() {
+            let hour = new Date().getHours();
+            if (hour >= 4 && hour <= 11) return 'morning';
+            if (hour >= 12 && hour <= 16) return 'afternoon';
+            if (hour >= 17 && hour <= 23) return 'evening';
+            if (hour >= 24 || hour <= 3) return 'night';
+        }
+        document.getElementById("time").innerHTML = ('Good ' + greeting());
+    </script>
 </body>
+
 </html>
