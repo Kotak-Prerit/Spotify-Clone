@@ -1,34 +1,28 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic Pro", Meiryo, "MS Gothic", sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 .container{
     display: flex;
     height: 100vh;
     width: 100%;
-    background: #fff;
+    background: linear-gradient(#212121, #121212);
+    justify-content: right;
 }
 nav{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 250px;
+    width: 15%;
+    position: fixed;
+    left: 0;
     background: #000;
     align-items: center;
 }
 ::-webkit-scrollbar{
-    width: 15px;
-}
-::-webkit-scrollbar-thumb{
-    background: #80808088;
-}
-::-webkit-scrollbar-track{
-    background: transparent;
-}
-::-webkit-scrollbar-thumb:hover{
-    background: #cfcfcf83;
+    display: none;
 }
 .spotify_logo{
     width: 100%;
@@ -111,25 +105,8 @@ nav{
     flex-direction: column;
     align-items: center;
 }
-.create_liked ul li p{
-    font-weight: 100;
-    background: #a7a7a7;
-    padding: 3px 7px;
-    border-radius: 3px;
-    color: black;
-    font-size: 16px;
-}
-.liked{
-    height: 22px;
-    width: 22px;
-    background-image: url(img/liked\ songs.png);
-    background-size: cover;
-    border-radius: 3px;
-    opacity: 0.7;
-}
 .create_liked li:hover svg{
     fill: #fff;
-    background: linear-gradient(125deg,red,#fff);
     transition: 0.6s ease;
 }
 .create_liked li:hover a{
@@ -137,10 +114,6 @@ nav{
 }
 .create_liked li:hover .liked{
     opacity: 1;
-    transition: 0.6s ease;
-}
-.create_liked li:hover p{
-    background: #fff;
     transition: 0.6s ease;
 }
 .create_liked li:nth-child(2){
@@ -167,25 +140,24 @@ nav{
     font-size: 14px;
     text-decoration: none;
     padding-left: 30px;
+    cursor: default;
 }
 .playlists li:hover a{
     color: #fff;
 }
-.grid_container{
-    display: flex;
-    width: inherit;
-    flex-direction: column;
-    background: #121212;
+.main_container{
     overflow-y: scroll;
+    width: 85%;
 }
-header{
-    width: calc(100% - 200px);
+.main_nav{
+    width:100%;
+    background-color: transparent;
     display: flex;
-    height: 64px;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-    background: #402727;
-    position: fixed;
+    height: 64px;
+    position: sticky;
+    top: 0;
 }
 .back_front{
     display: flex;
@@ -244,6 +216,9 @@ header{
 .btn .account_btn img{
     border-radius: 50q;
 }
+.btn .account_btn:hover{
+    background: #727272;
+}
 #time{
     color: #fff;
     width: 95%;
@@ -251,9 +226,7 @@ header{
 .greeting{
     display: flex;
     justify-content: center;
-    margin-top: 64px;
-    padding: 50px 0 0 0;
-    background: linear-gradient(#402727 10%,#121212);
+    margin: 20px 0;
 }
 .install_app{
     align-items: center;
@@ -281,7 +254,59 @@ header{
 .install_app:hover svg circle{
     stroke: #fff;
 }
-.faltu{
+.card_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+.card{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 300px;
+    background: #77777781;
+    margin: 0 20px;
+    border-radius: 6px;
+    transition: 0.6s ease;
+    cursor: pointer;
+}
+.card:hover{
+    background: #8b8b8b;
+}
+.card_img{
+    border-radius: 6px 0 0 6px;
+    height: 100%;
+    box-shadow: 3px 0px 15px -2px #000;
+    overflow: hidden;
+}
+.Playlist_links{
+    text-decoration: none;
     color: #fff;
-    margin: 50px;
+    font-weight: 600;
+    margin-left: 20px;
+    font-size: 16px;
+}
+.ls_link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 63%;
+}
+.play{
+    transform: translateY(20px);
+    height: 50px;
+    width: 50px;
+    background: #1FDF64;
+    display: none;
+    place-items: center;
+    border-radius: 50q;
+    box-shadow: 0 5px 8px #000;
+}
+.card:hover .play{
+    transform: translateY(0);
+    display: grid;
 }
