@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');*{
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,13 +9,13 @@
     display: flex;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(#212121, #121212);
+    background: linear-gradient(#4e2097, #121212 50%);
     justify-content: right;
 }
 nav{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     width: 15%;
     position: fixed;
     left: 0;
@@ -22,7 +23,13 @@ nav{
     align-items: center;
 }
 ::-webkit-scrollbar{
-    display: none;
+    width: 13px;
+}
+::-webkit-scrollbar-thumb{
+    background: #8a8a8a88;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
 }
 .spotify_logo{
     width: 100%;
@@ -53,7 +60,7 @@ nav{
 .links a{
     color: #9b9b9b;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 800;
     text-decoration: none;
     margin-left: 20px;
     transition: 0.6s ease;
@@ -105,7 +112,7 @@ nav{
     flex-direction: column;
     align-items: center;
 }
-.create_liked li:hover svg{
+.create_liked li:hover .heart{
     fill: #fff;
     transition: 0.6s ease;
 }
@@ -267,7 +274,7 @@ nav{
     display: flex;
     align-items: center;
     height: 80px;
-    width: 300px;
+    width: 325px;
     background: #77777781;
     margin: 0 20px;
     border-radius: 6px;
@@ -294,7 +301,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 63%;
+    width: 67%;
 }
 .play{
     transform: translateY(20px);
@@ -309,4 +316,62 @@ nav{
 .card:hover .play{
     transform: translateY(0);
     display: grid;
+}
+.bi{
+    background: #c7c7c7;
+    border-radius: 3px;
+    padding: 2px;
+    width: 25px;
+}
+.create_liked li:hover .bi{
+    background: #fff;
+    transition: 0.6s ease;
+}
+.top_mixes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 0; 
+}
+.tm_links{
+    width: 92%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.top_mixes_link{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+.tm_links .tm_heading{
+    font-size: 24px;
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+}
+.see_all{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 12px;
+    color: #B3B3B3;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.tm_cards{
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+}
+.top_mixes_card{
+    width: 250px;
+    height: 360px;
+    background: #4b4b4b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
