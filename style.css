@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family:Raleway:wght@100;200;300;400;500;600;700;800;900&display:swap');
 *{
     margin: 0;
     padding: 0;
@@ -9,14 +9,14 @@
     display: flex;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(#4e2097, #121212 50%);
     justify-content: right;
+    background: linear-gradient(#4e2097, #121212 50%);
 }
 nav{
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 15%;
+    width: 17%;
     position: fixed;
     left: 0;
     background: #000;
@@ -26,7 +26,7 @@ nav{
     width: 13px;
 }
 ::-webkit-scrollbar-thumb{
-    background: #8a8a8a88;
+    background: #5a5a5a71;
 }
 ::-webkit-scrollbar-track{
     background: transparent;
@@ -34,6 +34,14 @@ nav{
 .spotify_logo{
     width: 100%;
     cursor: pointer;
+}
+#preloader{
+    background: #000 url(img/spotify-music.gif) no-repeat center;
+    background-size: 50%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
 }
 .logo{
     margin: 25px 0 0 25px ;
@@ -154,11 +162,12 @@ nav{
 }
 .main_container{
     overflow-y: scroll;
-    width: 85%;
+    width: 83%;
+    background: linear-gradient(#4e2097, #121212 50%);
 }
 .main_nav{
-    width:100%;
-    background-color: transparent;
+    width: 100%;
+    background: #411c7a;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -222,6 +231,7 @@ nav{
 }
 .btn .account_btn img{
     border-radius: 50q;
+    width: 30px;
 }
 .btn .account_btn:hover{
     background: #727272;
@@ -233,7 +243,7 @@ nav{
 .greeting{
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: 40px 0 15px 0;
 }
 .install_app{
     align-items: center;
@@ -274,9 +284,9 @@ nav{
     display: flex;
     align-items: center;
     height: 80px;
-    width: 325px;
+    width: 345px;
     background: #77777781;
-    margin: 0 20px;
+    margin: 10px;
     border-radius: 6px;
     transition: 0.6s ease;
     cursor: pointer;
@@ -332,20 +342,23 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 30px 0; 
 }
 .tm_links{
-    width: 92%;
+    width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 20px;
+}
+.see_all:hover,
+.tm_links .tm_heading:hover{
+    text-decoration: underline;
+    color: #28ee71;
 }
 .top_mixes_link{
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 15px 0;
 }
 .tm_links .tm_heading{
     font-size: 24px;
@@ -363,15 +376,82 @@ nav{
 }
 .tm_cards{
     width: 100%;
-    background: #fff;
     display: flex;
     justify-content: center;
+    align-items: flex-end;
 }
 .top_mixes_card{
-    width: 250px;
-    height: 360px;
-    background: #4b4b4b;
-    display: flex;
-    flex-direction: column;
+    width: 190px;
+    height: 290px;
+    border-radius: 5px;
+    background: #171717;
+    display: block;
+    margin: 20px 15px;
+}
+.top_mixes_card:hover{
+    background: #292929;
+    transition: 0.5s ease;
+}
+.top_mixes_card img{
+    margin: 15px;
+    height: 55%;
+    width: 160px;
+    border-radius: 5px;
+}
+.top_mixes_card h5,
+.top_mixes_card p{
+    margin: 0 20px;
+    color: #fff;
+    line-height: 1.5;
+    align-self: flex-start;
+    text-decoration: none;
+}
+.top_mixes_card h5{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.top_mixes_card p{
+    font-weight: 600;
+    color: #727272;
+    font-size: 14px;
+}
+.top_mixes_card a{
+    text-decoration: none;
+}
+.last{
+    padding-bottom: 90px;
+    margin-bottom: 100px;
+    border-bottom: .5px solid #7e7e7ebd;
+    width: 90%;
+    margin-left: 60px;
+}
+.unavailable{
+    display: none;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+.unavailable h1{
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    bottom: 100px;
+}
+.unavailable img{
+    height: 300px;
+    width: 350px;
+}
+@media (max-width:1150px) {
+    
+    .unavailable{
+        display: flex;
+    }
+    .container{
+        display: none;
+    }
+    body{
+        height: 100vh;
+    }
 }
