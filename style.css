@@ -463,7 +463,7 @@ nav{
 .socials ul{
     display: flex;
     justify-content: center;
-    border-bottom: 0.5px solid #575757;
+    border-bottom: 0.5px solid #2A2A2A;
     padding-bottom: 50px;
     width: 90%;
 }
