@@ -25,6 +25,7 @@
 .most-listened{
     width: 99%;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .resizer{
@@ -43,7 +44,7 @@
 .main_container{
     overflow-y: scroll;
     overflow-x: hidden;
-    background: linear-gradient(#4A1F8E, #121212 50%);
+    background: #121212;
 }
 ::-webkit-scrollbar{
     width: 13px;
@@ -307,8 +308,8 @@
 .card{
     display: flex;
     align-items: center;
-    height: 80px;
-    aspect-ratio: 4;
+    max-height: 80px;
+    max-width: 300px;
     background: #57575781;
     margin: 10px;
     border-radius: 6px;
@@ -419,7 +420,7 @@
 }
 .top_mixes_card{
     width: 190px;
-    height: 290px;
+    max-height: 290px;
     border-radius: 5px;
     background: #171717;
     display: block;
@@ -480,4 +481,37 @@
 .socials ul li:hover svg{
     fill: #ffff00;
     transition: 0.3s ease;
+}
+@media (max-width: 850px){
+    .sidebar-container{
+        display: none;
+    }
+    .card{
+        max-height: 60px;
+        max-width: 200px;
+    }
+    .Playlist_links{
+        font-size: 14px;
+    }
+    .play{
+        display: none;
+    }
+    .greeting{
+        margin: 0;
+        margin-inline: 20px;
+    }
+    .top_mixes_card{
+        background: none;
+    }
+    .top_mixes_card img{
+        margin: 0;
+        margin-bottom: 10px;
+        border-radius: 0;
+    }
+    .top_mixes_card p, .top_mixes_card h5{
+        margin: 0 ;
+    }
+    .top_mixes_card:hover{
+        background: none;
+    }
 }
