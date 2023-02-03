@@ -4,22 +4,46 @@
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
 }
+*::selection{
+    background: transparent;
+}
 .container{
     display: flex;
     height: 100vh;
     width: 100%;
-    justify-content: right;
-    background: linear-gradient(#4e2097, #121212 50%);
 }
-nav{
+.sidebar{
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 17%;
-    position: fixed;
-    left: 0;
     background: #000;
     align-items: center;
+    overflow-x: hidden;
+    height: 100%;
+    position: relative;
+    min-width: 230px;
+}
+.most-listened{
+    width: 99%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.resizer{
+    position: absolute;
+    width: 3px;
+    top: 0;
+    right: 0;
+    cursor: col-resize;
+    height: 100%;
+    background: #4b4b4b;
+    opacity: 0;
+}
+.resizer:hover{
+    opacity: 1;
+}
+.main_container{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: linear-gradient(#4A1F8E, #121212 50%);
 }
 ::-webkit-scrollbar{
     width: 13px;
@@ -89,13 +113,11 @@ nav{
 }
 .create_liked{
     display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: flex-start;
     list-style: none;
     width: 100%;
     cursor: pointer;
-    padding-left: 20px;
 }
 .create_liked li{
     list-style: none;
@@ -108,6 +130,12 @@ nav{
     text-decoration: none;
     transition: 0.6s ease;
 }
+.create_liked ul::after{
+    content: '';
+    height: 1px;
+    width: 100%;
+    background: #4C4645;
+}
 .create_liked li a{
     color: #9b9b9b;
     font-size: 14px;
@@ -117,11 +145,10 @@ nav{
     margin-left: 20px;
 }
 .create_liked ul{
-    width: 100%;
-    margin-left: -10px;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-left: 25px;
 }
 .create_liked li:hover .heart{
     fill: #fff;
@@ -151,6 +178,7 @@ nav{
     list-style: none;
     margin: 12px 0;
     height: 20px;
+    overflow: hidden;
 }
 .playlists li a{
     color: #a7a7a7;
@@ -163,17 +191,12 @@ nav{
 .playlists li:hover a{
     color: #fff;
 }
-.main_container{
-    overflow-y: scroll;
-    width: 83%;
-    background: linear-gradient(#4e2097, #121212 50%);
-}
 .main_nav{
     width: 100%;
-    background: #411c7a;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     height: 64px;
     position: sticky;
     top: 0;
@@ -254,7 +277,7 @@ nav{
     display: flex;
     gap: 16px;
     height: 100px;
-    padding: 13px
+    padding: 13px;
 }
 .install_app a{
     text-decoration: none;
@@ -285,15 +308,16 @@ nav{
     display: flex;
     align-items: center;
     height: 80px;
-    width: 345px;
-    background: #77777781;
+    aspect-ratio: 4;
+    background: #57575781;
     margin: 10px;
     border-radius: 6px;
     transition: 0.6s ease;
     cursor: pointer;
 }
+
 .card:hover{
-    background: #8b8b8b;
+    background: #4C4645;
 }
 .card_img{
     border-radius: 6px 0 0 6px;
@@ -316,17 +340,27 @@ nav{
 }
 .play{
     transform: translateY(20px);
+    background: #1FDF64;
+    opacity: 0;
+    place-items: center;
+    display: flex;
     height: 50px;
     width: 50px;
-    background: #1FDF64;
-    display: none;
-    place-items: center;
-    border-radius: 50q;
-    box-shadow: 0 5px 8px #000;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    box-shadow: 0 5px 8px #262626;
+    transition: 0.3s ease-in-out;
+    cursor: auto;
 }
 .card:hover .play{
     transform: translateY(0);
-    display: grid;
+    opacity: 1;
+}
+.play:hover{
+    height: 52px;
+    width: 52px;
+    transition: none;
 }
 .bi{
     background: #c7c7c7;
@@ -345,11 +379,12 @@ nav{
     justify-content: center;
 }
 .tm_links{
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    padding-inline: 25px;
 }
 .see_all:hover,
 .tm_links .tm_heading:hover{
@@ -378,8 +413,9 @@ nav{
 .tm_cards{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: flex-end;
+    padding-inline: 10px;
 }
 .top_mixes_card{
     width: 190px;
@@ -421,36 +457,6 @@ nav{
 }
 .last{
     padding-bottom: 100px;
-}
-.unavailable{
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-}
-.unavailable h1{
-    position: absolute;
-    text-align: center;
-    font-size: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    bottom: 100px;
-}
-.unavailable img{
-    height: 300px;
-    width: 350px;
-}
-@media (max-width:900px) {
-    
-    .unavailable{
-        display: flex;
-    }
-    .container{
-        display: none;
-    }
-    body{
-        height: 100vh;
-    }
 }
 .socials{
     width: 100%;
